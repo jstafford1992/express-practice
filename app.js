@@ -8,8 +8,12 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 
+//Routes
+const home = require('./routes/home.js');
 
+app.set('view engine', 'ejs');
 
+app.use('/', home);
 
 
 
